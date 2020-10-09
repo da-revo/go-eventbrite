@@ -537,7 +537,7 @@ func (c *Client) EventSearch(ctx context.Context, req *EventSearchRequest) (*Eve
 func (c *Client) EventGet(ctx context.Context, id string) (*Event, error) {
 	result := &Event{}
 
-	return result, c.getJSON(ctx, "/events/"+id, url.Values{}, &result)
+	return result, c.getJSON(ctx, "/events/"+id, nil, &result)
 }
 
 // EventCreate makes a new event, and returns an event for the specified event. Does not support the
