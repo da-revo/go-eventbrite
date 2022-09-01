@@ -145,7 +145,7 @@ type Region struct {
 	Label string `json:"label"`
 }
 
-// Image is an object with details about the original verion of the image.
+// Original is an object with details about the original verion of the image.
 type Original struct {
 	// The URL of the original image
 	URL    *string `json:"url,omitempty"`  
