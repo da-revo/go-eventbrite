@@ -145,6 +145,16 @@ type Region struct {
 	Label string `json:"label"`
 }
 
+// Image is an object with details about the original verion of the image.
+type Original struct {
+	// The URL of the original image
+	URL    *string `json:"url,omitempty"`  
+	// The width of the original image 
+	Width  *int64  `json:"width,omitempty"`
+	// The height of the original image
+	Height *int64  `json:"height,omitempty"`
+}
+
 // Image is an object with details about a given image.
 //
 // https://www.eventbrite.com/developer/v3/response_formats/image/#ebapi-image
@@ -153,6 +163,8 @@ type Image struct {
 	ID string `json:"id"`
 	// The URL of the image
 	Url string `json:"url"`
+	// The original image
+	Original     *Original `json:"original,omitempty"`    
 }
 
 // A location where an event happens.
